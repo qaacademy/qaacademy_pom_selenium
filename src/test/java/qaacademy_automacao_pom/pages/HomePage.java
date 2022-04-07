@@ -7,16 +7,16 @@ public class HomePage {
 
     WebDriver driver;
 
-
-    String REGISTRAR = "//a[@id='btnRegister']"; 
+//Variavel maiuscula quer Final. Uma variavel que muda pouco ou nunca o seu valor. 
+    String REGISTRAR = "//button[contains(text(),'Registrar')]"; 
     String EMAIL = "//input[@id='inputEmail']";
     String NOME = "//input[@id='inputName']";
     String SENHA = "//input[@id='inputPassword']";
     String CONFIRM_SENHA = "//input[@id='inputPasswordConfirmation']";
-    String CRIAR_SALDO = "//span[@id='toggleAddBalance']";
+    String CRIAR_SALDO = "//span[@type='checkbox']";
     String CADASTRAR = "//a[@id='btnRegister']";
 
-    public HomePage(WebDriver driverParametro) {
+    public HomePage(WebDriver driverParametro) {//Metodo construtor
         this.driver = driverParametro;
 
     }
@@ -26,23 +26,23 @@ public class HomePage {
 
     }
 
-    public void preencherEmail() {
-        driver.findElement(By.xpath(EMAIL)).sendKeys("teste1@gmail.com");
+    public void preencherEmail(String email) {
+        driver.findElement(By.xpath(EMAIL)).sendKeys(email);
 
     }
 
-    public void preencherNome() {
-        driver.findElement(By.xpath(NOME)).sendKeys("QA Academy");
+    public void preencherNome(String nome) {
+        driver.findElement(By.xpath(NOME)).sendKeys(nome);
 
     }
 
-    public void preencherSenha() {
-        driver.findElement(By.xpath(SENHA)).sendKeys("teste");
+    public void preencherSenha(String senha) {
+        driver.findElement(By.xpath(SENHA)).sendKeys(senha);
 
     }
 
-    public void preencherConfirmacaoSenha() {
-        driver.findElement(By.xpath(CONFIRM_SENHA)).sendKeys("teste");
+    public void preencherConfirmacaoSenha(String confirmacao) {
+        driver.findElement(By.xpath(CONFIRM_SENHA)).sendKeys(confirmacao);
 
     }
 
