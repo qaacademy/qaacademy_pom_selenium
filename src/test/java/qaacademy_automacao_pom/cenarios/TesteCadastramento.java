@@ -34,7 +34,7 @@ public class TesteCadastramento {
     @Test
     public void testePositivoCadastro() {
         homePage.clicarRegistrar();
-        homePage.preencherEmail("teste1@gmail.com");
+        homePage.preencherEmail("teste2@gmail.com");
         homePage.preencherNome("QA Academy");
         homePage.preencherSenha("teste");
         homePage.preencherConfirmacaoSenha("teste");

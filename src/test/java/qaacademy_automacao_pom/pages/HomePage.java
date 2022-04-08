@@ -15,6 +15,7 @@ public class HomePage {
     String CONFIRM_SENHA = "//input[@id='inputPasswordConfirmation']";
     String CRIAR_SALDO = "//span[@type='checkbox']";
     String CADASTRAR = "//a[@id='btnRegister']";
+    String FECHAR = "//a[contains(text(),'Fechar')]"; 
 
     public HomePage(WebDriver driverParametro) {//Metodo construtor
         this.driver = driverParametro;
@@ -33,12 +34,10 @@ public class HomePage {
 
     public void preencherNome(String nome) {
         driver.findElement(By.xpath(NOME)).sendKeys(nome);
-
     }
 
     public void preencherSenha(String senha) {
         driver.findElement(By.xpath(SENHA)).sendKeys(senha);
-
     }
 
     public void preencherConfirmacaoSenha(String confirmacao) {
@@ -52,6 +51,10 @@ public class HomePage {
 
     public void clicarCadastrar() {
         driver.findElement(By.xpath(CADASTRAR)).click();
+    }
+
+    public void clicarFechar() {
+        driver.findElement(By.xpath(FECHAR)).click();
     }
 
 }
